@@ -119,8 +119,5 @@ para la implementación.
 
 ## Uso de IA
 
-He usado IA en este trabajo para dos cosas: pasar mis notas a este README
-con formato Markdown, y para revisar/depurar algunos puntos del código
-cuando me atascaba (la fórmula del tamaño del rango con paso negativo y el
-formato de `__str__` del polinomio). El código lo he intentado hacer yo
-primero siguiendo la hoja de problemas y los apuntes.
+He usado IA para darle formato a este README y para corregir un par de
+fallos del código. El código lo he hecho yo.
