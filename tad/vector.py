@@ -75,7 +75,7 @@ class Vector:
         return total
 
     def norm(self):
-        """Modulo del vector: raiz cuadrada de v.v"""
+        # modulo del vector: raiz cuadrada del producto escalar consigo mismo
         return math.sqrt(self.dot(self))
 
     def cosine_distance(self, other):

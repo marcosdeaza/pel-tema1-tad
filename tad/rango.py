@@ -30,8 +30,9 @@ class Range:
         self._step = step
 
     def __len__(self):
-        # Numero de saltos de tamano step que caben entre start y end.
-        # Division entera redondeando hacia arriba: (a + b - 1) // b
+        # Cuantos saltos de tamano step caben entre start y end.
+        # Es una division redondeando hacia arriba, y el truco para hacerla
+        # con division entera es (a + b - 1) // b
         if self._step > 0:
             if self._start >= self._end:
                 return 0
@@ -48,7 +49,7 @@ class Range:
         return self._start + i * self._step
 
     def __iter__(self):
-        # Recorrido con un bucle while para no usar range()
+        # Con un while porque no se puede usar range()
         i = 0
         n = len(self)
         while i < n:

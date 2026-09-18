@@ -27,7 +27,8 @@ Operaciones:
 class Polynomial:
 
     def __init__(self, coefficients):
-        # copiamos la lista para que no se modifique desde fuera
+        # copiamos la lista para que si cambian la original desde fuera
+        # no nos afecte
         self._coefs = list(coefficients)
         if len(self._coefs) == 0:
             self._coefs = [0]

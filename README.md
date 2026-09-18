@@ -3,8 +3,8 @@
 Hoja de problemas del Tema 1 de **Programación con Estructuras Lineales**
 (2º de Ingeniería Informática, Universidad Europea de Valencia).
 
-Cuatro TADs especificados e implementados en Python, cada uno con su
-batería de pruebas.
+Los cuatro problemas de la hoja hechos en Python. Cada uno tiene su
+especificación del TAD, la clase y unos tests.
 
 | Problema | TAD | Módulo | Clase |
 |---|---|---|---|
@@ -45,10 +45,9 @@ tests/
   test_rango.py
 ```
 
-La especificación formal de cada TAD (nombre, valores y operaciones con
-lo que reciben y devuelven) está en el docstring de cabecera de cada
-módulo, tal y como pide la hoja: primero se especifica el TAD y después
-se implementa la clase.
+La especificación de cada TAD (nombre, valores y operaciones, con lo que
+reciben y devuelven) está en el docstring del principio de cada módulo,
+que es lo que pide la hoja: primero especificar el TAD y luego la clase.
 
 ## Resumen de cada problema
 
@@ -61,10 +60,10 @@ Atributos: cliente, identificador, límite y balance (empieza a 0).
 - `depositar(cantidad)`: resta al balance. Si la cantidad es mayor que el
   balance actual no se hace nada y devuelve `False`.
 
-Decisión de diseño: las operaciones devuelven un booleano en vez de lanzar
-una excepción, porque que un cargo no se admita es un resultado normal del
-TAD, no un error del programa. Las cantidades no positivas sí lanzan
-`ValueError` porque eso ya es un mal uso.
+He hecho que las dos operaciones devuelvan `True`/`False` en vez de lanzar
+una excepción, porque que un cargo no se admita es algo normal en una
+tarjeta, no un fallo del programa. Si se pasa una cantidad negativa o 0
+sí que salta un `ValueError`, porque eso ya es usarlo mal.
 
 ### 2. Vector
 
@@ -97,8 +96,8 @@ del término: `[5, 4, 3]` es `3x^2 + 4x + 5`.
 - `evaluate(x)`: suma de `a_i * x^i`.
 - `sum(p)`: devuelve un polinomio nuevo, no modifica los operandos.
 
-`__str__` no lo pedía el enunciado pero ayuda mucho a depurar
-(`x^3 + 4x^2 - 2x - 3`).
+`__str__` no lo pedía el enunciado pero lo añadí porque me ayudaba a ver
+qué estaba pasando al probar (`x^3 + 4x^2 - 2x - 3`).
 
 ### 4. Rango
 
@@ -113,18 +112,15 @@ Réplica de `range` sin usar `range`. Solo se guardan `start`, `end` y
 - `r.sum()`: suma de los elementos. También funciona `sum(r)` porque la
   clase define `__iter__` con un bucle `while`.
 
-Uno de los tests compara `Range` con el `range` real de Python en varios
-casos (pasos positivos, negativos, rangos vacíos) para asegurar que se
-comporta igual.
+Para comprobar que funciona, uno de los tests compara mi `Range` con el
+`range` real de Python en varios casos (paso positivo, negativo, rango
+vacío). En los tests sí se puede usar `range`, la restricción es solo
+para la implementación.
 
-## Uso de inteligencia artificial
+## Uso de IA
 
-Siguiendo la normativa de la asignatura, declaro el uso de IA en este
-trabajo:
-
-- El código de los cuatro problemas lo he escrito yo siguiendo los
-  apuntes y la hoja de problemas. He usado IA como apoyo para revisar y
-  depurar (por ejemplo, la fórmula del tamaño del rango con `step`
-  negativo y el formato de `__str__` del polinomio).
-- Este README lo he redactado con ayuda de IA a partir de mis notas,
-  principalmente para darle formato Markdown.
+He usado IA en este trabajo para dos cosas: pasar mis notas a este README
+con formato Markdown, y para revisar/depurar algunos puntos del código
+cuando me atascaba (la fórmula del tamaño del rango con paso negativo y el
+formato de `__str__` del polinomio). El código lo he intentado hacer yo
+primero siguiendo la hoja de problemas y los apuntes.
