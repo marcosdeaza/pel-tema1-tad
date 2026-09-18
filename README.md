@@ -36,7 +36,7 @@ python3 -m unittest -v
 tad/
   tarjeta_credito.py   Problema 1
   vector.py            Problema 2
-  polynomial.py        Problema 3
+  polinomio.py         Problema 3
   rango.py             Problema 4
 tests/
   test_tarjeta_credito.py
