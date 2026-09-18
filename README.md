@@ -10,7 +10,7 @@ especificación del TAD, la clase y unos tests.
 |---|---|---|---|
 | 1 | Tarjeta de crédito | `tad/tarjeta_credito.py` | `TarjetaCredito` |
 | 2 | Vector | `tad/vector.py` | `Vector` |
-| 3 | Polinomio | `tad/polynomial.py` | `Polynomial` |
+| 3 | Polinomio | `tad/polinomio.py` | `Polynomial` |
 | 4 | Rango | `tad/rango.py` | `Range` |
 
 ## Cómo ejecutarlo
@@ -41,7 +41,7 @@ tad/
 tests/
   test_tarjeta_credito.py
   test_vector.py
-  test_polynomial.py
+  test_polinomio.py
   test_rango.py
 ```
 

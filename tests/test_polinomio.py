@@ -1,6 +1,6 @@
 import unittest
 
-from tad.polynomial import Polynomial
+from tad.polinomio import Polynomial
 
 
 class TestPolynomial(unittest.TestCase):
