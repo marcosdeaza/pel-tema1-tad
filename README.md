@@ -120,4 +120,4 @@ para la implementación.
 ## Uso de IA
 
 He usado IA para darle formato a este README y para corregir un par de
-fallos del código. El código lo he hecho yo.
+fallos del código.
